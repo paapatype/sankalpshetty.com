@@ -6,27 +6,15 @@
   <title>Sankalp Shetty</title>
   <meta name="description" content="Sankalp Shetty — coming soon." />
 
-  <!-- Google Fonts: Aleo (primary) + Noto Sans (fallback), both SemiBold 600 -->
+  <!-- Google Fonts: Aleo (primary) + Noto Sans (fallback), ExtraLight 200 -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link
-    href="https://fonts.googleapis.com/css2?family=Aleo:wght@600&family=Noto+Sans:wght@600&display=swap"
+    href="https://fonts.googleapis.com/css2?family=Aleo:wght@200&family=Noto+Sans:wght@200&display=swap"
     rel="stylesheet"
   />
 
   <style>
-    :root {
-      --bg: #ffffff;
-      --fg: #111111;
-    }
-
-    @media (prefers-color-scheme: dark) {
-      :root {
-        --bg: #0a0a0a;
-        --fg: #f2f2f2;
-      }
-    }
-
     * {
       margin: 0;
       padding: 0;
@@ -40,30 +28,59 @@
 
     body {
       display: flex;
-      align-items: center;
-      justify-content: center;
+      align-items: center;        /* vertically centered */
+      justify-content: flex-start; /* left aligned */
       min-height: 100vh;
       min-height: 100dvh;
-      background: var(--bg);
-      color: var(--fg);
+      padding-left: clamp(1.5rem, 7vw, 7rem);
+      padding-right: 1.5rem;
+      background: #ffffff;
       -webkit-font-smoothing: antialiased;
       -moz-osx-font-smoothing: grayscale;
       text-rendering: optimizeLegibility;
     }
 
     .coming-soon {
-      /* Aleo first; Noto Sans SemiBold as the intended fallback */
       font-family: "Aleo", "Noto Sans", sans-serif;
-      font-weight: 600; /* SemiBold */
-      letter-spacing: -0.04em; /* -4% tracking */
-      font-size: clamp(2.5rem, 8vw, 5rem);
-      line-height: 1.1;
-      text-align: center;
-      padding: 0 1rem;
+      font-weight: 200;          /* Extra Light */
+      letter-spacing: -0.04em;   /* -4% tracking */
+      font-size: clamp(3rem, 9vw, 6rem);
+      line-height: 1.02;
+      text-align: left;
+      color: #000000;
+      /* Graceful ink fade: white -> slight grey -> black */
+      animation: inkFade 2.6s cubic-bezier(0.4, 0, 0.2, 1) 0.15s both;
+    }
+
+    .coming-soon span {
+      display: block;
+    }
+
+    @keyframes inkFade {
+      0% {
+        color: #ffffff; /* emerges from the white page */
+      }
+      50% {
+        color: #9a9a9a; /* slight grey */
+      }
+      100% {
+        color: #000000; /* black */
+      }
+    }
+
+    /* Respect users who prefer no motion */
+    @media (prefers-reduced-motion: reduce) {
+      .coming-soon {
+        animation: none;
+        color: #000000;
+      }
     }
   </style>
 </head>
 <body>
-  <main class="coming-soon">Coming soon</main>
+  <h1 class="coming-soon">
+    <span>Coming</span>
+    <span>soon</span>
+  </h1>
 </body>
 </html>

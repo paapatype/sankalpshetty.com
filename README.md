@@ -3,9 +3,10 @@
 Minimal "Coming soon" landing page for **sankalpshetty.com**.
 
 - Single static `index.html` — no build step.
-- Typeface: **Aleo** (Google Font), SemiBold (600), with **Noto Sans** SemiBold as the fallback.
+- Typeface: **Aleo** (Google Font), ExtraLight (200), with **Noto Sans** ExtraLight as the fallback.
 - Tracking: **-4%** (`letter-spacing: -0.04em`).
-- Centered for mobile and desktop; respects light/dark system preference.
+- Two left-aligned lines ("Coming" / "soon"), vertically centered on mobile and desktop.
+- Graceful on-load ink fade: text emerges white → soft grey → black (honors `prefers-reduced-motion`).
 
 ## Deploy
 
