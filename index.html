@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Sankalp Shetty</title>
+  <meta name="description" content="Sankalp Shetty — coming soon." />
+
+  <!-- Google Fonts: Aleo (primary) + Noto Sans (fallback), both SemiBold 600 -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Aleo:wght@600&family=Noto+Sans:wght@600&display=swap"
+    rel="stylesheet"
+  />
+
+  <style>
+    :root {
+      --bg: #ffffff;
+      --fg: #111111;
+    }
+
+    @media (prefers-color-scheme: dark) {
+      :root {
+        --bg: #0a0a0a;
+        --fg: #f2f2f2;
+      }
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    html,
+    body {
+      height: 100%;
+    }
+
+    body {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 100vh;
+      min-height: 100dvh;
+      background: var(--bg);
+      color: var(--fg);
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+      text-rendering: optimizeLegibility;
+    }
+
+    .coming-soon {
+      /* Aleo first; Noto Sans SemiBold as the intended fallback */
+      font-family: "Aleo", "Noto Sans", sans-serif;
+      font-weight: 600; /* SemiBold */
+      letter-spacing: -0.04em; /* -4% tracking */
+      font-size: clamp(2.5rem, 8vw, 5rem);
+      line-height: 1.1;
+      text-align: center;
+      padding: 0 1rem;
+    }
+  </style>
+</head>
+<body>
+  <main class="coming-soon">Coming soon</main>
+</body>
+</html>
