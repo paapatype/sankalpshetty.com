@@ -28,12 +28,11 @@
 
     body {
       display: flex;
-      align-items: center;        /* vertically centered */
-      justify-content: flex-start; /* left aligned */
+      align-items: center;     /* vertically centered */
+      justify-content: center; /* centered block on the page */
       min-height: 100vh;
       min-height: 100dvh;
-      padding-left: clamp(1.5rem, 7vw, 7rem);
-      padding-right: 1.5rem;
+      padding: 1.5rem;
       background: #ffffff;
       -webkit-font-smoothing: antialiased;
       -moz-osx-font-smoothing: grayscale;
@@ -44,8 +43,8 @@
       font-family: "Aleo", "Noto Sans", sans-serif;
       font-weight: 200;          /* Extra Light */
       letter-spacing: -0.04em;   /* -4% tracking */
-      font-size: clamp(3rem, 9vw, 6rem);
-      line-height: 1.02;
+      font-size: clamp(2.1rem, 6.3vw, 4.2rem); /* 30% smaller */
+      line-height: 0.9;                         /* tighter leading */
       text-align: left;
       color: #000000;
       /* Graceful ink fade: white -> slight grey -> black */
